@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.noteitapp.dev.noteit.EditActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:id="@+id/edit_note_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:textColor="#F5F5F5"
+                android:id="@+id/edit_title"
+                android:textSize="15sp"
+                android:textColorHint="#F5F5F5"
+                android:textStyle="bold"
+                android:imeOptions="actionDone"
+                android:inputType="textCapSentences"
+                android:capitalize="sentences"
+                android:gravity="left"
+                android:singleLine="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/grey_border"
+                android:hint="Title"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="100dp"
+                    android:textColorHint="#F5F5F5"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:paddingRight="30dp"
+                    android:layout_weight="1"
+                    android:text="a sjldjla kjsaklsj lkjdaklj skldjal kjdklj akljsdkl jaklsdj klajdlk jaklsjd klajdklj klasjdkl ajsklj"
+                    android:textColor="#F5F5F5"
+                    android:id="@+id/edit_content"
+                    android:textSize="15sp"
+                    android:imeOptions="actionDone"
+                    android:capitalize="sentences"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:gravity="left"
+                    android:background="@drawable/grey_border"
+                    android:hint="Content"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:textStyle="bold"
+                        android:padding="4dp"
+                        android:textColor="#FFF"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:minWidth="0dp"
+                        android:src="@drawable/save"
+                        android:id="@+id/tmp_save_note"
+                        android:minHeight="0dp"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center"
+                        android:background="@drawable/green_button_selectors"
+                        android:text="S"
+                        />
+
+            </RelativeLayout>
+
+
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:scrollbars="none"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/grey_border"
+                android:id="@+id/edit_category"
+                android:layout_height="wrap_content"/>
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:stepSize="1"
+                android:layout_marginTop="10dp"
+                android:id="@+id/edit_rating"
+                android:layout_height="wrap_content"
+                android:numStars="5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:id="@+id/edit_save_note_tmp"
+                    android:minHeight="0dp"
+                    android:padding="15dp"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    android:background="@drawable/green_button_selector"
+                    android:text="Save Now"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:id="@+id/edit_save_note"
+                    android:minHeight="0dp"
+                    android:padding="15dp"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    android:background="@drawable/green_button_selector"
+                    android:text="Save Note"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
